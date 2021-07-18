@@ -1,7 +1,6 @@
 // object literal
 var myFeature = { 
-    filterSlider: function() {
-        
+    filterSlider: function() {        
         $('.creative-field-options').slick({
             dots: false,
             infinite: false,
@@ -35,10 +34,30 @@ var myFeature = {
             ]
           });   
     },
-    
+    navBarSlideUp: function() {
+      var previousScroll = 20; 
+      $(window).scroll(function(e) { 
+          var scroll = $(window).scrollTop();
+          if (scroll >= previousScroll) {
+              $('.navbar').addClass("navbar-hide");
+              if($('.navbar-collapse').hasClass('show')) {
+                  $('.navbar-collapse').removeClass('show');
+                  $('.navbar-toggler').addClass('collapsed');
+                  $('.navbar-toggler').attr('aria-expanded', 'false');
+              }            
+          } else if (scroll < previousScroll) {
+              $('.navbar').removeClass("navbar-hide").addClass('active');
+              if (scroll == 0) {
+                  $('.navbar').removeClass("navbar-hide active").addClass('got ya');
+              }
+          }
+          previousScroll = scroll;
+          
+      });
+    },    
     init: function() {  
         myFeature.filterSlider();
-
+        myFeature.navBarSlideUp();
     }
 
 }
