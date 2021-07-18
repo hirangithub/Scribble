@@ -2,6 +2,9 @@
     background: url(../images/hero-bg.jpg) no-repeat center bottom;
     background-size: cover;
     min-height: 37rem;    
+    @media #{$breakpoint-sm} {
+        min-height: 31rem;
+    }
     @media #{$breakpoint-md} {
         background: url(../images/hero-bg.jpg) no-repeat center top;
         background-size: cover;
@@ -20,9 +23,10 @@
         left: 0;
         right: 0;
         transform: translateY(-70%);
-        padding: 0 2rem;
+        padding: 0 1rem;
         @media #{$breakpoint-sm} {
             top: 70%;  
+            padding: 0 2rem;
         }
         @media #{$breakpoint-md} {
             position: static;
@@ -43,22 +47,58 @@
             width: 48rem;
             margin-top: -5%;
         }
+        .btn {
+            @media #{$breakpoint-md} {
+                margin-top: 1rem;
+            }
+        }
     }
 }
 
 .section-filter {
-    ul.creative-field-options {
-        button {
-            position: absolute;
-            display: none !important;
-        }
-        li.slick-slide {
-            text-align: center;
-            width: auto !important;
+    .cS-hidden {
+        height: 1px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        overflow: hidden;
+    }
+    ul.lightSlider {     
+        height: 3rem !important; 
+        li {
+            text-align: center;       
             a {
-                padding: 0 1rem;
+                padding: 0 1rem .5rem;
+                text-decoration: none;
+                width: 10rem;
+                position: relative;
+                &.active {
+                    border-bottom: 3px solid $slate-grey;                                       
+                }
             }
         }
+    }
+    .lSAction {
+        .lSPrev,
+        .lSNext {
+            top: 13px;
+            opacity: 1;
+        }
+        .lSPrev {
+            background: $white url(../images/chevron-left.svg) no-repeat 0 0;
+            background-size: cover;
+            left: 0;
+        }
+        .lSNext {
+            background: $white url(../images/chevron-right.svg) no-repeat 0 0;
+            background-size: cover;
+            right: 0;
+        }
+    }
+
+    .filter-control {
+        position: absolute;
+        right: 0;
+        top: 1.5rem;
     }
 }
 
@@ -193,13 +233,29 @@
 .prompt-continue {
     background-color: $pale-grey;
     padding: 1rem 2rem;
-    border-radius: 3rem;
+    border-radius: .3rem;
     text-align: center;
     margin: 4rem auto;
-    width: 55%;
+    width: auto;
+    @media #{$breakpoint-md} {
+        width: auto;
+        border-radius: 3rem;
+    }
     ul {
         align-items: center;
         justify-content: center;
         column-gap: 2rem;
+        display: block !important;
+        @media #{$breakpoint-md} {
+            display: flex !important;
+        }
+        li {
+            &:first-child {
+                padding-bottom: 1rem;
+                @media #{$breakpoint-md} {
+                    padding-bottom: 0;
+                }
+            }
+        }
     }
 }

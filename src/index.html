@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">  
     <link href="styles/theme.css" rel="stylesheet" type="text/css"> 
 </head>
 <body class="d-flex flex-column h-100" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
@@ -86,48 +86,47 @@
         <aside>
             <h1><span>Meet Scribble —</span> The simple way to build your portfolio & showcase your work in style</h1>
             <p>500,000+ shots from thousands of inspirational designers</p>
-            <a href="#" class="btn btn-primary lg mt-md-3">Sign up <i class="bi bi-arrow-right"></i></a>
+            <a href="#" class="btn btn-primary lg">Sign up <i class="bi bi-arrow-right"></i></a>
         </aside>
     </section>
 
-    <section class="section-filter">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8">
-                    <ul class="creative-field-options">
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Animation</a></li>
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Illustration</a></li>
-                        <li><a href="#">Mobile</a></li>
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Product Design</a></li>
-                        <li><a href="#">Typography</a></li>
-                        <li><a href="#">Web Design</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Recommended
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="#">Recommended</a></li>
-                            <li><a class="dropdown-item" href="#">Curated</a></li>
-                            <li><a class="dropdown-item" href="#">Most Appreciated</a></li>
-                            <li><a class="dropdown-item" href="#">Most Viewed</a></li>                            
-                            <li><a class="dropdown-item" href="#">Most Discussed</a></li>
-                            <li><a class="dropdown-item" href="#">Most Recent</a></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="btn btn-radius" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                        <i class="bi bi-geo-alt sm"></i> Nugegoda . New
-                    </a> 
-                </div>
+    <!-- <section class="section-filter">    
+        <div style="width: 60rem">  
+        <ul class="cs-hidden" id="filter-slider">
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">Animation</a></li>
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">Illustration</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">Print</a></li>
+            <li><a href="#">Product Design</a></li>
+            <li><a href="#">Typography</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li>&nbsp;</li>
+        </ul> 
+    </div>
+        
+        <div class="filter-control">
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary thick dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Recommended
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item active" href="#">Recommended</a></li>
+                    <li><a class="dropdown-item" href="#">Curated</a></li>
+                    <li><a class="dropdown-item" href="#">Most Appreciated</a></li>
+                    <li><a class="dropdown-item" href="#">Most Viewed</a></li>                            
+                    <li><a class="dropdown-item" href="#">Most Discussed</a></li>
+                    <li><a class="dropdown-item" href="#">Most Recent</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+            <a href="#" class="btn btn-radius" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <i class="bi bi-geo-alt sm"></i> Nugegoda . New
+            </a> 
+        </div>        
+    </section> -->
 
     <section class="section-shots">
         <div class="container-fluid">
@@ -356,18 +355,18 @@
     </div>
 
     <footer class="mt-auto">
-        <div class="container px-4 px-sm-0">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4 col-lg-6 pe-md-5 position-relative">
+                <div class="mb-4 mb-sm-5 col-md-8 col-lg-4 position-relative">
                     <a href="#" class="logo"><img src="images/logo.svg" title="" /></a>
                     <p>Scribble is the world’s leading community for creatives to share, grow, and get hired.</p>
-                    <ul class="d-flex pb-4 pb-md-0">
-                        <li class="p-0"><a href="#" target="_blank"><i class="bi bi-facebook sm"></i></a></li>
-                        <li class="p-0"><a href="#" target="_blank"><i class="bi bi-linkedin sm"></i></a></li>
-                        <li class="p-0"><a href="#" target="_blank"><i class="bi bi-twitter sm"></i></a></li>                       
+                    <ul class="d-flex social-links">
+                        <li class="p-0"><a href="#" target="_blank"><i class="bi bi-facebook md"></i></a></li>
+                        <li class="p-0"><a href="#" target="_blank"><i class="bi bi-linkedin md"></i></a></li>
+                        <li class="p-0"><a href="#" target="_blank"><i class="bi bi-twitter md"></i></a></li>                       
                     </ul>
                 </div>
-                <div class="col-md-3 col-lg-2">
+                <div class="mb-4 col-md-4 mb-sm-3 mb-md-5 col-lg-2">
                     <h3 class="h3-sm">For designes</h3>
                     <ul>
                         <li><a class="active" aria-current="page" href="#">Go Pro!</a></li>
@@ -379,7 +378,7 @@
                         <li><a href="#">Weekly Warm-Up</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-lg-2">
+                <div class="mb-4 col-md-4 mb-sm-3 col-lg-2">
                     <h3 class="h3-sm">Hire designers</h3>
                     <ul>
                         <li><a href="#">Post a job opening</a></li>
@@ -387,7 +386,7 @@
                         <li><a href="#">Search for designers</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-lg-2">
+                <div class="mb-4 col-md-4 mb-sm-3 col-lg-2">
                     <h3 class="h3-sm">Company</h3>
                     <ul>
                         <li><a href="#">About</a></li>
@@ -400,7 +399,7 @@
                         <li><a href="#">Privacy policy</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-lg-2">
+                <div class="mb-4 col-md-4 col-lg-2">
                     <h3 class="h3-sm">Directories</h3>
                     <ul>
                         <li><a href="#">Design jobs</a></li>
@@ -410,14 +409,14 @@
                     </ul>
                 </div>
             </div>
-            <div class="row footer-lower">
-                <div class="col-lg-6">
+            <div class="row footer-lower mt-5 pt-3">
+                <div class="col">
                     <p property="dc:rights">&copy;
                         <span property="dc:dateCopyrighted">2021</span>
                         <span property="dc:publisher">Scribble. All rights reserved.</span>
                     </p>
                 </div>
-                <div class="col">
+                <div class="col d-flex justify-content-end">
                     <label><strong>545,423</strong> shorts scribbled</label>
                 </div>
             </div>
@@ -426,7 +425,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.0.2/enquire.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
     <script src="scripts/main.js" type="text/javascript"></script>  
 </body>
 </html>

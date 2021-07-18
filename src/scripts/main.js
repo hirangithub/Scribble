@@ -1,38 +1,22 @@
 // object literal
 var myFeature = { 
     filterSlider: function() {        
-        $('.creative-field-options').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 6,
-            slidesToScroll: 6,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-            ]
-          });   
+      $('#filter-slider').lightSlider({
+          item: 3,
+          autoWidth: true,
+          loop: false,
+          auto: false,
+          slideMove: 1, 
+          adaptiveHeight: true,
+          enableTouch:true,
+          enableDrag:true,
+          freeMove:true,
+          swipeThreshold: 40,
+          pager: false,
+          onSliderLoad: function() {
+              $('#autoWidth').removeClass('cS-hidden');
+          } 
+      });           
     },
     navBarSlideUp: function() {
       var previousScroll = 20; 
@@ -66,5 +50,7 @@ var myFeature = {
 $(function () {    
     //initialize core object
     myFeature.init(); 
+
+
 
 });
