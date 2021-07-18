@@ -169,6 +169,11 @@ p {
             border-color: $white;
             color: $white;
         }
+        &.dropdown-toggle,
+        &.lg {
+            font-size: 1rem;
+            padding: .4rem 1.2rem;    
+        }
         &:hover {
             background-color: $pale-grey;
             color: $slate-grey;   
@@ -186,6 +191,11 @@ p {
     &.xl {
         font-size: 2rem;
     }
+}
+
+.dropdown-item.active, 
+.dropdown-item:active {
+    background-color: $radical-red;
 }
 
 .navbar {
@@ -316,6 +326,13 @@ footer {
     }
     .footer-lower {
         border-top: 1px solid $mid-grey;
+        .col-md-6 {
+            &:last-child {
+                @media #{$breakpoint-custom} {
+                    justify-content: flex-start !important;
+                }
+            }
+        }
     }    
     .logo {
         margin-bottom: .5rem;

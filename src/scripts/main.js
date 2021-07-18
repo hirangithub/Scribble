@@ -39,9 +39,9 @@ var myFeature = {
           
       });
     },    
-    init: function() {  
-        myFeature.filterSlider();
+    init: function() {          
         myFeature.navBarSlideUp();
+        myFeature.filterSlider();
     }
 
 }

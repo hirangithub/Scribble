@@ -14,7 +14,7 @@ body, a, p, .btn {
   font-style: normal;
 }
 
-.font-semibold, h2, h3 {
+.font-semibold, h2, h3, .section-filter ul.lightSlider li.active a {
   font-weight: 600;
   font-style: normal;
 }
@@ -218,6 +218,11 @@ p {
   color: #ffffff;
 }
 
+.btn.btn-secondary.dropdown-toggle, .btn.btn-secondary.lg {
+  font-size: 1rem;
+  padding: .4rem 1.2rem;
+}
+
 .btn.btn-secondary:hover {
   background-color: #F7F7F7;
   color: #222222;
@@ -233,6 +238,11 @@ p {
 
 .bi.xl {
   font-size: 2rem;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #FF385C;
 }
 
 .navbar {
@@ -398,6 +408,14 @@ footer .footer-lower {
   border-top: 1px solid #AEAEAE;
 }
 
+@media only screen and (max-width: 768px) {
+  footer .footer-lower .col-md-6:last-child {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+}
+
 footer .logo {
   margin-bottom: .5rem;
   display: block;
@@ -457,8 +475,8 @@ footer .social-links {
 
 @media only screen and (min-width: 576px) {
   .section-banner aside {
-    top: 70%;
-    padding: 0 2rem;
+    top: 67%;
+    padding: 0 5rem;
   }
 }
 
@@ -509,26 +527,30 @@ footer .social-links {
 
 .section-filter ul.lightSlider {
   height: 3rem !important;
+  padding-top: .5rem;
 }
 
 .section-filter ul.lightSlider li {
   text-align: center;
 }
 
+.section-filter ul.lightSlider li:first-child a {
+  margin-left: 2rem;
+}
+
 .section-filter ul.lightSlider li a {
   padding: 0 1rem .5rem;
   text-decoration: none;
-  width: 10rem;
   position: relative;
 }
 
-.section-filter ul.lightSlider li a.active {
+.section-filter ul.lightSlider li a.active, .section-filter ul.lightSlider li a:hover {
   border-bottom: 3px solid #222222;
 }
 
 .section-filter .lSAction .lSPrev,
 .section-filter .lSAction .lSNext {
-  top: 13px;
+  top: 20px;
   opacity: 1;
 }
 
@@ -544,10 +566,18 @@ footer .social-links {
   right: 0;
 }
 
-.section-filter .filter-control {
-  position: absolute;
-  right: 0;
-  top: 1.5rem;
+.section-filter .more-filters {
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-filter .more-filters {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    margin-top: 1rem;
+  }
 }
 
 .section-shots ul.grid-item-holder {

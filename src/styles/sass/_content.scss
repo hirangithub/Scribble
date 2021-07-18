@@ -25,8 +25,8 @@
         transform: translateY(-70%);
         padding: 0 1rem;
         @media #{$breakpoint-sm} {
-            top: 70%;  
-            padding: 0 2rem;
+            top: 67%;  
+            padding: 0 5rem;
         }
         @media #{$breakpoint-md} {
             position: static;
@@ -64,23 +64,34 @@
     }
     ul.lightSlider {     
         height: 3rem !important; 
+        padding-top: .5rem;
         li {
-            text-align: center;       
+            text-align: center;     
+            &:first-child {
+                a {
+                    margin-left: 2rem;
+                }                
+            } 
             a {
                 padding: 0 1rem .5rem;
-                text-decoration: none;
-                width: 10rem;
+                text-decoration: none;                
                 position: relative;
-                &.active {
+                &.active,
+                &:hover {
                     border-bottom: 3px solid $slate-grey;                                       
                 }
-            }
+            }  
+            &.active {
+                a {
+                    @extend .font-semibold;
+                }
+            }          
         }
     }
     .lSAction {
         .lSPrev,
         .lSNext {
-            top: 13px;
+            top: 20px;
             opacity: 1;
         }
         .lSPrev {
@@ -95,10 +106,12 @@
         }
     }
 
-    .filter-control {
-        position: absolute;
-        right: 0;
-        top: 1.5rem;
+    .more-filters {
+        column-gap: 1rem;
+        @media #{$breakpoint-custom} {
+            justify-content: space-between !important;
+            margin-top: 1rem;
+        }       
     }
 }
 
