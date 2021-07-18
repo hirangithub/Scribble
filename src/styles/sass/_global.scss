@@ -92,9 +92,9 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem; 
-    line-height: 2.6rem;
-    @extend .font-semibold;
+    font-size: 1.6rem; 
+    line-height: 2rem;
+    @extend .font-medium;
     padding-bottom: 1rem;
 }
 
@@ -191,6 +191,12 @@ p {
     &.xl {
         font-size: 2rem;
     }
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .dropdown-item.active, 
