@@ -34,9 +34,6 @@ section,
 footer {
     position: relative;
     padding: 1.5rem 0;
-    @media #{$breakpoint-md} {
-        padding: 3rem 0;
-    }
 }
 
 .hide-in-mob {
@@ -90,14 +87,19 @@ h2 {
     font-size: 2rem; 
     line-height: 2.6rem;
     @extend .font-semibold;
-    padding-bottom: 1rem;    
-    span {
-        color: $radical-red;
-    }
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.1rem; 
+    line-height: 1.6rem;
+    @extend .font-semibold;
+    padding-bottom: 0; 
 }
 
 a {    
-    font-family: $font-primary;    
+    font-family: $font-primary;  
+    color: $slate-grey;  
     @extend .font-regular;
     text-decoration: underline;  
     &:hover {
