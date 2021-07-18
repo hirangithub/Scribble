@@ -235,11 +235,11 @@
     padding: 1rem 2rem;
     border-radius: .3rem;
     text-align: center;
-    margin: 4rem auto;
-    width: auto;
+    margin: 2rem auto 3rem;
     @media #{$breakpoint-md} {
         width: auto;
         border-radius: 3rem;
+        margin: 3rem auto 5rem;
     }
     ul {
         align-items: center;

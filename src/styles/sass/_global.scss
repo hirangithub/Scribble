@@ -184,7 +184,7 @@ p {
         font-size: 1.4rem;
     }
     &.xl {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }
 
@@ -205,6 +205,9 @@ p {
         font-size: 0.9rem;
         line-height: 0.9rem;
     }
+    i {
+        color: $white;
+    }
     .logo {
         width: 8rem;
         display: none;
@@ -215,6 +218,52 @@ p {
     .nav-link:focus,
     .nav-link:hover {
         color: $mid-grey;
+    }
+    .navbar-toggler {
+        padding: 0;
+        &:focus {
+            box-shadow: none;
+        }
+        i {
+            color: $white;
+            &.bi-list {
+                display: block;
+            }
+            &.bi-x {
+                display: none;
+            }
+        }
+        &[aria-expanded=true] {
+            .bi-x {
+                display: block;
+            }
+            .bi-list {
+                display: none;
+            }
+        }
+    }
+    .navbar-collapse {
+        @media #{$breakpoint-custom} {
+            background-color: $white;
+            padding: 1rem 2rem;
+            a,
+            i {
+                color: $slate-grey;
+            }
+            .btn-secondary.white {
+                border-color: $slate-grey;
+                color: $slate-grey;
+            }
+            ul {
+                align-items: center;
+            }
+            .right-block {
+                margin-left: 0 !important;  
+                li {
+                    padding-top: 1rem;
+                }             
+            }
+        }
     }
     &.active {
         box-shadow: 0 0 5px $mid-grey;
@@ -240,6 +289,11 @@ p {
             &:hover {
                 background-color: $pale-grey;
                 color: $slate-grey;   
+            }
+        }
+        .navbar-toggler {
+            i {
+                color: $slate-grey;
             }
         }
     }
