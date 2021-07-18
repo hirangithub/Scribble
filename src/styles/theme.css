@@ -151,7 +151,7 @@ p {
   border-radius: 2rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .btn.lg {
@@ -259,6 +259,7 @@ p {
   height: auto;
   margin: 0;
   cursor: pointer;
+  border-radius: .3rem;
 }
 
 .section-shots ul.grid-item-holder li figure img {
@@ -267,24 +268,9 @@ p {
      object-fit: cover;
 }
 
-.section-shots ul.grid-item-holder li figure figcaption {
-  position: absolute;
-  left: 1.5rem;
-  bottom: 1.5rem;
-  visibility: hidden;
-  color: #ffffff;
-  z-index: 100;
-}
-
-.section-shots ul.grid-item-holder li figure figcaption h3 {
-  color: #ffffff;
-}
-
-.section-shots ul.grid-item-holder li figure:hover figcaption {
-  visibility: visible;
-}
-
-.section-shots ul.grid-item-holder li figure:hover:after {
+.section-shots ul.grid-item-holder li figure:after {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
   content: '';
   position: absolute;
   bottom: 0;
@@ -295,6 +281,37 @@ p {
   background: white;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(34, 34, 34, 0.8)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(34, 34, 34, 0.8) 80%);
+  opacity: 0;
+}
+
+.section-shots ul.grid-item-holder li figure figcaption {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  color: #ffffff;
+  z-index: 100;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.section-shots ul.grid-item-holder li figure figcaption h3 {
+  color: #ffffff;
+  padding-right: 1rem;
+}
+
+.section-shots ul.grid-item-holder li figure:hover figcaption {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.section-shots ul.grid-item-holder li figure:hover:after {
+  opacity: 1;
 }
 
 .section-shots ul.grid-item-holder li ol {
@@ -367,5 +384,25 @@ p {
 
 .section-shots ul.grid-item-holder li ol li.micro-data a:hover .bi.bi-heart-fill {
   display: block;
+}
+
+.prompt-continue {
+  background-color: #F7F7F7;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  text-align: center;
+  margin: 4rem auto;
+  width: 55%;
+}
+
+.prompt-continue ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
 }
 /*# sourceMappingURL=theme.css.map */
