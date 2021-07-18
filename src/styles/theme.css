@@ -1,0 +1,221 @@
+.font-light {
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-regular, html,
+body, a, p {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-medium {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-semibold, h2 {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-bold, h1 {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Common styles declaration:
+ * Global  */
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+}
+
+html.custom-modal-open,
+body.custom-modal-open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+html.custom-modal-open .fixed-top,
+body.custom-modal-open .fixed-top {
+  margin-left: -17px;
+}
+
+html.custom-modal-open .navbar-brand,
+body.custom-modal-open .navbar-brand {
+  margin-left: 17px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+section,
+footer {
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  section,
+  footer {
+    padding: 3rem 0;
+  }
+}
+
+.hide-in-mob {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .hide-in-mob {
+    display: block;
+  }
+}
+
+.show-in-mob {
+  display: block;
+}
+
+@media only screen and (min-width: 992px) {
+  .show-in-mob {
+    display: none;
+  }
+}
+
+.btn.focus,
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+}
+
+video {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  padding-bottom: 1rem;
+}
+
+h1 span {
+  color: #FF385C;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  padding-bottom: 1rem;
+}
+
+h2 span {
+  color: #FF385C;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  color: #222222;
+  padding-bottom: .5rem;
+}
+
+.btn {
+  padding: .4rem 1.5rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: .9rem;
+}
+
+.btn.lg {
+  padding: .8rem 2.5rem;
+}
+
+.btn.btn-primary {
+  background-color: #FF385C;
+  border-color: #FF385C;
+}
+
+.btn.btn-primary:hover {
+  background-color: #FF113C;
+  border-color: #FF113C;
+}
+
+.btn.btn-secondary {
+  background-color: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.btn.btn-secondary.white {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.bi.sm {
+  font-size: 1.2rem;
+}
+
+.bi.md {
+  font-size: 1.4rem;
+}
+
+.bi.xl {
+  font-size: 1.6rem;
+}
+
+.navbar {
+  color: #ffffff;
+}
+
+.navbar a {
+  color: #ffffff;
+}
+
+.navbar a:hover {
+  color: #F7F7F7;
+}
+
+.section-banner {
+  background: url(../images/hero-bg.jpg) no-repeat center bottom;
+  background-size: cover;
+  min-height: 40rem;
+}
+
+.section-banner aside {
+  width: 50%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=theme.css.map */

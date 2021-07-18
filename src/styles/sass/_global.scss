@@ -1,0 +1,163 @@
+/* Common styles declaration:
+ * Global  */
+
+// ------------------------------------------
+// Global styles ----------------------
+// ------------------------------------------
+
+html, 
+body {     
+    font-family: $font-primary;
+    @extend .font-regular; 
+    color: $slate-grey;
+    &.custom-modal-open {
+        overflow: hidden;
+        padding-right: 17px;
+        .fixed-top {
+            margin-left: -17px;
+        }
+        .navbar-brand {
+            margin-left: 17px;
+        }
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li { 
+        list-style-type: none;
+    }
+}
+
+section,
+footer {
+    position: relative;
+    padding: 1.5rem 0;
+    @media #{$breakpoint-md} {
+        padding: 3rem 0;
+    }
+}
+
+.hide-in-mob {
+    display: none;
+    @media #{$breakpoint-lg} {
+        display: block;
+    }
+}
+.show-in-mob {
+    display: block;
+    @media #{$breakpoint-lg} {
+        display: none;
+    }
+}
+
+.btn.focus, 
+.btn:focus {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+video {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input,
+textarea,
+select {
+    font-family: $font-primary; 
+    color: $slate-grey;      
+    margin: 0; 
+}
+
+h1 {
+    font-size: 3.2rem; 
+    line-height: 4.2rem;
+    @extend .font-bold;
+    padding-bottom: 1rem;    
+    span {
+        color: $radical-red;
+    }
+}
+
+h2 {
+    font-size: 2rem; 
+    line-height: 2.6rem;
+    @extend .font-semibold;
+    padding-bottom: 1rem;    
+    span {
+        color: $radical-red;
+    }
+}
+
+a {    
+    font-family: $font-primary;    
+    @extend .font-regular;
+    text-decoration: underline;  
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {    
+    color: $slate-grey;
+    @extend .font-regular;
+    padding-bottom: .5rem;
+}
+
+.btn {
+    padding: .4rem 1.5rem;    
+    cursor: pointer;    
+    border-radius: 2rem;
+    transition: all 0.5s ease; 
+    font-size: .9rem;    
+    &.lg {
+        padding: .8rem 2.5rem; 
+    }
+    &.btn-primary {
+        background-color: $radical-red; 
+        border-color: $radical-red;    
+        &:hover {
+            background-color: $radical-red-dark;
+            border-color: $radical-red-dark;
+        }    
+    }    
+    &.btn-secondary {
+        background-color: $white;
+        border-color: $slate-grey;
+        color: $slate-grey; 
+        &.white {
+            background-color: transparent;
+            border-color: $white;
+            color: $white;
+        }
+    }
+}
+
+.bi {
+    &.sm {
+        font-size: 1.2rem;
+    }
+    &.md {
+        font-size: 1.4rem;
+    }
+    &.xl {
+        font-size: 1.6rem;
+    }
+}
+
+.navbar {
+    color: $white;
+    a {
+        color: $white;
+        &:hover {
+            color: $pale-grey;
+        }
+    }
+}

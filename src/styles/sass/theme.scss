@@ -1,0 +1,72 @@
+// ------------------------------------------
+// Color variables --------------------------
+// ------------------------------------------
+
+$slate-grey:        #222222;
+$mid-grey:          #AEAEAE;
+$pale-grey:         #F7F7F7;
+$radical-red:       #FF385C;
+$radical-red-dark:  #FF113C;
+$warn:              #EF3139;
+$black:             #000000;
+$white:             #ffffff;
+
+
+// font declaration 
+$font-primary:		'Poppins', sans-serif;
+$font-secondary:    'Comic Neue', cursive;
+
+.font-light {
+    font-weight: 300;
+    font-style: normal;    
+}
+.font-regular {
+    font-weight: 400;
+    font-style: normal;    
+}
+.font-medium {
+    font-weight: 500;
+    font-style: normal;    
+}
+.font-semibold {
+    font-weight: 600;
+    font-style: normal;    
+}
+.font-bold {
+    font-weight: 700;
+    font-style: normal;    
+}
+
+
+// container width override
+@mixin styling($base-width) {
+    .container, 
+    .container-lg, 
+    .container-md, 
+    .container-sm, 
+    .container-xl {
+        max-width: $base-width;
+    }
+}
+
+$breakpoint-xs: "only screen and (min-width: 0)";
+
+$breakpoint-sm: "only screen and (min-width: 576px)";
+
+$breakpoint-md: "only screen and (min-width: 768px)";
+
+$breakpoint-lg: "only screen and (min-width: 992px)";
+
+$breakpoint-xl: "only screen and (min-width: 1200px)";
+
+$breakpoint-xxl: "only screen and (min-width: 1400px)";
+
+
+
+// ------------------------------------------
+// Import styles ----------------------------
+// ------------------------------------------
+
+@import 'global';  
+
+@import 'content';  
