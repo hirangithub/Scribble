@@ -110,7 +110,8 @@ a {
 p {    
     color: $slate-grey;
     @extend .font-regular;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
+    margin: 0;
 }
 
 .btn {
@@ -161,5 +162,13 @@ p {
         &:hover {
             color: $pale-grey;
         }
+    }
+}
+
+footer {
+    background-color: $pale-grey;
+    border-top: 1px solid $mid-grey;
+    .footer-lower {
+        border-top: 1px solid $mid-grey;
     }
 }

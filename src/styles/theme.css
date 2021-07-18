@@ -142,7 +142,8 @@ a:hover {
 
 p {
   color: #222222;
-  padding-bottom: .5rem;
+  padding-bottom: 1rem;
+  margin: 0;
 }
 
 .btn {
@@ -204,6 +205,15 @@ p {
   color: #F7F7F7;
 }
 
+footer {
+  background-color: #F7F7F7;
+  border-top: 1px solid #AEAEAE;
+}
+
+footer .footer-lower {
+  border-top: 1px solid #AEAEAE;
+}
+
 .section-banner {
   background: url(../images/hero-bg.jpg) no-repeat center bottom;
   background-size: cover;
@@ -213,6 +223,20 @@ p {
 .section-banner aside {
   width: 50%;
   margin: 0 auto;
+}
+
+.section-filter ul.creative-field-options button {
+  position: absolute;
+  display: none !important;
+}
+
+.section-filter ul.creative-field-options li.slick-slide {
+  text-align: center;
+  width: auto !important;
+}
+
+.section-filter ul.creative-field-options li.slick-slide a {
+  padding: 0 1rem;
 }
 
 .section-shots ul.grid-item-holder {

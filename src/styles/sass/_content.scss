@@ -8,6 +8,22 @@
     }
 }
 
+.section-filter {
+    ul.creative-field-options {
+        button {
+            position: absolute;
+            display: none !important;
+        }
+        li.slick-slide {
+            text-align: center;
+            width: auto !important;
+            a {
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+
 .section-shots {
     ul.grid-item-holder {
         display: grid;
