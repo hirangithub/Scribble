@@ -1,10 +1,48 @@
 .section-banner {
     background: url(../images/hero-bg.jpg) no-repeat center bottom;
     background-size: cover;
-    min-height: 40rem;
-    aside {
-        width: 50%;
-        margin: 0 auto;
+    min-height: 37rem;    
+    @media #{$breakpoint-md} {
+        background: url(../images/hero-bg.jpg) no-repeat center top;
+        background-size: cover;
+        min-height: 40rem;    
+    } 
+    @media #{$breakpoint-xl} {
+        background: url(../images/hero-bg.jpg) no-repeat center bottom;
+        background-size: cover;
+    }
+    @media #{$breakpoint-xxl} {
+        min-height: 48rem;    
+    }
+    aside {   
+        position: absolute;
+        top: 75%;  
+        left: 0;
+        right: 0;
+        transform: translateY(-70%);
+        padding: 0 2rem;
+        @media #{$breakpoint-sm} {
+            top: 70%;  
+        }
+        @media #{$breakpoint-md} {
+            position: static;
+            transform: none;
+            margin: 12% auto 0;
+            padding: 0;
+            width: 40rem;
+        }
+        @media #{$breakpoint-xl} {
+            width: 48rem;
+            margin-top: 10%;
+        }
+        @media #{$breakpoint-xxl} {
+            width: 48rem;
+            margin-top: 6%;
+        }
+        @media #{$breakpoint-xxxl} {
+            width: 48rem;
+            margin-top: -5%;
+        }
     }
 }
 
@@ -42,8 +80,7 @@
         @media #{$breakpoint-xxxl} {
             grid-template-columns: repeat(auto-fill, minmax(15%, 1fr)); 
         }
-        li {            
-            //min-height: 20rem;              
+        li {                        
             figure {
                 background-color: $pale-grey;
                 position: relative;
@@ -81,7 +118,7 @@
                     transition: all .4s ease;                
                     h3 {
                         color: $white;
-                        padding-right: 1rem;
+                        padding-right: 2rem;
                     }
                 }
                 &:hover {

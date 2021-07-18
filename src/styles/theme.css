@@ -4,7 +4,7 @@
 }
 
 .font-regular, html,
-body, a, p {
+body, a, p, .btn {
   font-weight: 400;
   font-style: normal;
 }
@@ -109,13 +109,27 @@ select {
 }
 
 h1 {
-  font-size: 3.2rem;
-  line-height: 4.2rem;
+  font-size: 2rem;
+  line-height: 2.6rem;
   padding-bottom: 1rem;
 }
 
 h1 span {
   color: #FF385C;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
 }
 
 h2 {
@@ -137,7 +151,12 @@ a {
 }
 
 a:hover {
+  color: #AEAEAE;
+}
+
+a:active, a:visited, a:focus {
   text-decoration: none;
+  color: #222222;
 }
 
 p {
@@ -152,21 +171,23 @@ p {
   border-radius: 2rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .btn.lg {
   padding: .8rem 2.5rem;
+  font-size: 1rem;
 }
 
 .btn.btn-primary {
   background-color: #FF385C;
   border-color: #FF385C;
+  color: #ffffff;
 }
 
 .btn.btn-primary:hover {
-  background-color: #FF113C;
-  border-color: #FF113C;
+  background-color: #D81D3F;
+  border-color: #D81D3F;
 }
 
 .btn.btn-secondary {
@@ -179,6 +200,11 @@ p {
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
+}
+
+.btn.btn-secondary:hover {
+  background-color: #F7F7F7;
+  color: #222222;
 }
 
 .bi.sm {
@@ -207,20 +233,35 @@ p {
   background-color: transparent;
 }
 
-.navbar a {
-  color: #ffffff;
+@media only screen and (min-width: 1400px) {
+  .navbar.fixed-top {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
-.navbar a:hover {
-  color: #F7F7F7;
+.navbar a {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
 }
 
 .navbar .logo {
+  width: 8rem;
   display: none;
 }
 
 .navbar .logo.white {
   display: block;
+}
+
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: #AEAEAE;
+}
+
+.navbar.active {
+  -webkit-box-shadow: 0 0 5px #AEAEAE;
+          box-shadow: 0 0 5px #AEAEAE;
 }
 
 .navbar.active.fixed-top {
@@ -235,17 +276,23 @@ p {
   display: none;
 }
 
-.navbar.active:after {
-  -webkit-box-shadow: 0px 1px 5px #AEAEAE;
-          box-shadow: 0px 1px 5px #AEAEAE;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 1;
+.navbar.active a {
+  color: #222222;
+}
+
+.navbar.active a:hover {
+  color: #AEAEAE;
+}
+
+.navbar.active .btn-secondary.white {
+  background-color: #ffffff;
+  border-color: #222222;
+  color: #222222;
+}
+
+.navbar.active .btn-secondary.white:hover {
+  background-color: #F7F7F7;
+  color: #222222;
 }
 
 footer {
@@ -260,12 +307,76 @@ footer .footer-lower {
 .section-banner {
   background: url(../images/hero-bg.jpg) no-repeat center bottom;
   background-size: cover;
-  min-height: 40rem;
+  min-height: 37rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-banner {
+    background: url(../images/hero-bg.jpg) no-repeat center top;
+    background-size: cover;
+    min-height: 40rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-banner {
+    background: url(../images/hero-bg.jpg) no-repeat center bottom;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .section-banner {
+    min-height: 48rem;
+  }
 }
 
 .section-banner aside {
-  width: 50%;
-  margin: 0 auto;
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .section-banner aside {
+    top: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-banner aside {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    margin: 12% auto 0;
+    padding: 0;
+    width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-banner aside {
+    width: 48rem;
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .section-banner aside {
+    width: 48rem;
+    margin-top: 6%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .section-banner aside {
+    width: 48rem;
+    margin-top: -5%;
+  }
 }
 
 .section-filter ul.creative-field-options button {
@@ -367,7 +478,7 @@ footer .footer-lower {
 
 .section-shots ul.grid-item-holder li figure figcaption h3 {
   color: #ffffff;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .section-shots ul.grid-item-holder li figure:hover figcaption {
