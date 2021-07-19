@@ -4,7 +4,6 @@
 /tmp
 /out-tsc
 *.log
-*.zip
 
 
 # dependencies
