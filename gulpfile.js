@@ -10,11 +10,8 @@ var paths = {
   srcHTML: './src/**/*.html',
   srcCSS: 'src/**/*.css',
   srcIMAGES: 'src/images/**/*.{gif,jpg,jpeg,png,svg}', 
-  srcJS: (['./src/js/jquery.waypoints.min.js',
-  './src/js/sticky.min.js',
-  './src/js/jquery.plugin.min.js',
-  './src/js/jquery.countdown.min.js',
-  './src/js/main.js']),
+  srcJS: ([
+  './src/scripts/main.js']),
   srcASSETS: (['src/**/*.mp4', 'src/**/*.mp3', 'src/**/*.ico', 'src/**/*.pdf']),
 
   dist: 'dist',
@@ -37,7 +34,7 @@ gulp.task('html:dist', function () {
 });
 gulp.task('css:dist', function () {
   return gulp.src(paths.srcCSS)
-    .pipe(concat('css/style.min.css'))
+    .pipe(concat('styles/theme.min.css'))
     .pipe(cleanCSS())
     .pipe(gulp.dest(paths.dist));
 });
@@ -47,7 +44,7 @@ gulp.task('images:dist', function () {
 });
 gulp.task('js:dist', function () {
   return gulp.src(paths.srcJS)
-    .pipe(concat('js/script.min.js'))
+    .pipe(concat('scripts/script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.dist));
 });
